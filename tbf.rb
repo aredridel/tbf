@@ -16,7 +16,7 @@ class TBF
 
 			limit, ts = @redis.mget(lkey, tkey)
 			limit = limit.to_f || 0
-			ts = ts.to_f || Time.now.to_f
+			ts = ts.to_f || now
 
 			elapsed = now - ts
 
